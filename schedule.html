@@ -40,28 +40,28 @@
       </section>
       <section class="schedule">
         <article class="appointment">
-          <header class="appointment__header">
+          <header class="appointment__time">
             <h4 class="text--semi-bold">12pm</h4>
-            <hr class="appointment__header-separator">
+            <hr class="appointment__separator">
           </header>
           <main class="appointment__add">
             <img class="appointment__add-button" src="images/add.png">
           </main>
         </article>
         <article class="appointment">
-          <header class="appointment__header">
+          <header class="appointment__time">
             <h4 class="text--semi-bold">1pm</h4>
-            <hr class="appointment__header-separator">
+            <hr class="appointment__separator">
           </header>
-          <main class="appointment__content appointment--active appointment--week1">
-            <section class="appointment__content-left">
+          <main class="appointment__card appointment__card--active appointment__card--week1">
+            <section class="appointment__card-left">
               <h2 class="text--regular">Liam Martinez</h2>
               <section class="interviewer">
                 <h4 class="text--light">Interviewer</h4>
                 <h3 class="text--regular">Sylvia Palmer</h3>
               </section>
             </section>
-            <section class="appointment__content-right">
+            <section class="appointment__card-right">
               <h1 class="text--semi-bold">W1</h1>
               <section class="appointment__actions">
                 <img class="appointment__actions-button" src="images/edit.png">
@@ -71,12 +71,12 @@
           </main>
         </article>
         <article class="appointment">
-          <header class="appointment__header">
+          <header class="appointment__time">
             <h4 class="text--semi-bold">2pm</h4>
-            <hr class="appointment__header-separator">
+            <hr class="appointment__separator">
           </header>
-          <main class="appointment__content appointment--inactive appointment--week2">
-            <section class="appointment__content-left">
+          <main class="appointment__card appointment__card--inactive appointment__card--week2">
+            <section class="appointment__card-left">
               <h2 class="text--regular">Richard Wong</h2>
               <section class="interviewer">
                 <h4 class="text--light">Interviewer</h4>
@@ -89,48 +89,48 @@
           </main>
         </article>
         <article class="appointment">
-          <header class="appointment__header">
+          <header class="appointment__time">
             <h4 class="text--semi-bold">3pm</h4>
-            <hr class="appointment__header-separator">
+            <hr class="appointment__separator">
           </header>
-          <main class="appointment__content appointment--inactive appointment--week3">
-            <section class="appointment__content-left">
+          <main class="appointment__card appointment__card--inactive appointment__card--week3">
+            <section class="appointment__card-left">
               <h2 class="text--regular">Lydia Miller-Jones</h2>
               <section class="interviewer">
                 <h4 class="text--light">Interviewer</h4>
                 <h3 class="text--regular">Cohana Roy</h3>
               </section>
             </section>
-            <section class="appointment__content-right">
+            <section class="appointment__card-right">
               <h1 class="text--semi-bold">W3</h1>
             </section>
           </main>
         </article>
         <article class="appointment">
-          <header class="appointment__header">
+          <header class="appointment__time">
             <h4 class="text--semi-bold">4pm</h4>
-            <hr class="appointment__header-separator">
+            <hr class="appointment__separator">
           </header>
-          <main class="appointment__content appointment--inactive appointment--week4">
-            <section class="appointment__content-left">
+          <main class="appointment__card appointment__card--inactive appointment__card--week4">
+            <section class="appointment__card-left">
               <h2 class="text--regular">Archie Cohen</h2>
               <section class="appointment__interviewer">
                 <h4 class="text--light">Interviewer</h4>
                 <h3 class="text--regular">Sylvia Palmer</h3>
               </section>
             </section>
-            <section class="appointment__content-right">
+            <section class="appointment__card-right">
               <h1 class="text--semi-bold">W4</h1>
             </section>
           </main>
         </article>
         <article class="appointment">
-          <header class="appointment__header">
+          <header class="appointment__time">
             <h4 class="text--semi-bold">5pm</h4>
-            <hr class="appointment__header-separator">
+            <hr class="appointment__separator">
           </header>
-          <main class="appointment__content appointment__create">
-            <section class="appointment__content-left">
+          <main class="appointment__card appointment__card--create">
+            <section class="appointment__card-left">
                 <input class="appointment__create-input text--semi-bold" name="name" placeholder="Enter Student Name">
                 <section class="interviewer">
                   <h4 class="interviewer__header text--light">Interviewer</h4>
@@ -156,7 +156,7 @@
                   </ul>
                 </section>
             </section>
-            <section class="appointment__content-right">
+            <section class="appointment__card-right">
               <section class="week-picker">
                 <ul class="week-picker__list">
                   <li class="week-picker__list-item week-picker__list-item--week1">
@@ -181,21 +181,21 @@
           </main>
         </article>
         <article class="appointment">
-          <header>
+          <header class="appointment__time">
             <h4 class="text--semi-bold">6pm</h4>
-            <hr>
+            <hr class="appointment__separator">
           </header>
-          <main class="appointment__content appointment__status">
+          <main class="appointment__card appointment__card--status">
             <img class="appointment__status-image" src="images/status.png">
             <h1 class="text--semi-bold">Saving</h1>
           </main>
         </article>
         <article class="appointment">
-          <header>
+          <header class="appointment__time">
             <h4 class="text--semi-bold">7pm</h4>
-            <hr>
+            <hr class="appointment__separator">
           </header>
-          <main class="appointment__content appointment__confirm">
+          <main class="appointment__card appointment__card--confirm">
             <h1 class="text--semi-bold">Delete appointment?</h1>
             <section class="appointment__actions">
               <button class="button button--inverted button--danger">Cancel</button>
@@ -204,11 +204,11 @@
           </main>
         </article>
         <article class="appointment">
-          <header>
+          <header class="appointment__time">
             <h4 class="text--semi-bold">8pm</h4>
-            <hr>
+            <hr class="appointment__separator">
           </header>
-          <main class="appointment__content appointment__error">
+          <main class="appointment__card appointment__card--error">
             <section class="appointment__error-message">
               <h1 class="text--semi-bold">Error</h1>
               <h3 class="text--light">Could not delete appointment.</h3>
@@ -217,9 +217,9 @@
           </main>
         </article>
         <article class="appointment">
-          <header>
+          <header class="appointment__time">
             <h4 class="text--semi-bold">9pm</h4>
-            <hr>
+            <hr class="appointment__separator">
           </header>
         </article>
       </section>

@@ -17,6 +17,10 @@
   @include button-active;
 }
 
+.week-picker__list-item:last-of-type {
+  margin-right: 0;
+}
+
 @each $color in $weeks-colors {
   $i: index($weeks-colors, $color);
 

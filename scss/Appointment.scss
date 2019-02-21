@@ -1,4 +1,4 @@
-.appointment__content {
+.appointment__card {
   min-height: 9rem;
   margin-left: 3rem;
   border-radius: 0.5rem;
@@ -9,14 +9,14 @@
   color: $white;
 }
 
-.appointment__content-left {
+.appointment__card-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 50%;
 }
 
-.appointment__content-right {
+.appointment__card-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -38,11 +38,11 @@
   @include button-active;
 }
 
-.appointment__header {
+.appointment__time {
   display: flex;
 }
 
-.appointment__header-separator {
+.appointment__separator {
   border-style: solid;
   border-width: 0.5px;
   width: 100%;
@@ -53,11 +53,11 @@
 @each $color in $weeks-colors {
   $i: index($weeks-colors, $color);
 
-  .appointment--active.appointment--week#{$i} {
+  .appointment__card--active.appointment__card--week#{$i} {
     background-color: rgba($color, $active-opacity);
   }
   
-  .appointment--inactive.appointment--week#{$i} {
+  .appointment__card--inactive.appointment__card--week#{$i} {
     color: rgba($color, $active-opacity);
     background: linear-gradient(90deg, rgba($color, $active-opacity), rgba($color, $active-opacity) 8px, rgba($color, $inactive-opacity) 0, rgba($color, $inactive-opacity));
   }
@@ -76,12 +76,12 @@
   @include button-active;
 }
 
-.appointment__create {
+.appointment__card--create {
   background-color: $dark-background;
   display: flex;
 }
 
-.appointment__status {
+.appointment__card--status {
   background-color: $dark-background;
   display: flex;
   justify-content: center;
@@ -93,7 +93,7 @@
   animation: rotate 1s linear infinite;
 }
 
-.appointment__confirm {
+.appointment__card--confirm {
   @include border-card($danger-color);
 
   display: flex;
@@ -102,7 +102,7 @@
   align-items: center;
 }
 
-.appointment__error {
+.appointment__card--error {
   @include border-card($error-color);
 
   display: flex;

@@ -17,7 +17,7 @@ ol, ul {
   margin: 0;
   padding: 0; }
 
-.appointment__content {
+.appointment__card {
   min-height: 9rem;
   margin-left: 3rem;
   border-radius: 0.5rem;
@@ -27,13 +27,13 @@ ol, ul {
   flex-flow: row wrap;
   color: #fff; }
 
-.appointment__content-left {
+.appointment__card-left {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   min-width: 50%; }
 
-.appointment__content-right {
+.appointment__card-right {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -53,41 +53,41 @@ ol, ul {
   opacity: 1.0;
   cursor: pointer; }
 
-.appointment__header {
+.appointment__time {
   display: flex; }
 
-.appointment__header-separator {
+.appointment__separator {
   border-style: solid;
   border-width: 0.5px;
   width: 100%;
   color: #f2f2f2;
   margin-left: 1rem; }
 
-.appointment--active.appointment--week1 {
+.appointment__card--active.appointment__card--week1 {
   background-color: #54a0ff; }
 
-.appointment--inactive.appointment--week1 {
+.appointment__card--inactive.appointment__card--week1 {
   color: #54a0ff;
   background: linear-gradient(90deg, #54a0ff, #54a0ff 8px, rgba(84, 160, 255, 0.15) 0, rgba(84, 160, 255, 0.15)); }
 
-.appointment--active.appointment--week2 {
+.appointment__card--active.appointment__card--week2 {
   background-color: #48dbfb; }
 
-.appointment--inactive.appointment--week2 {
+.appointment__card--inactive.appointment__card--week2 {
   color: #48dbfb;
   background: linear-gradient(90deg, #48dbfb, #48dbfb 8px, rgba(72, 219, 251, 0.15) 0, rgba(72, 219, 251, 0.15)); }
 
-.appointment--active.appointment--week3 {
+.appointment__card--active.appointment__card--week3 {
   background-color: #1dd1a1; }
 
-.appointment--inactive.appointment--week3 {
+.appointment__card--inactive.appointment__card--week3 {
   color: #1dd1a1;
   background: linear-gradient(90deg, #1dd1a1, #1dd1a1 8px, rgba(29, 209, 161, 0.15) 0, rgba(29, 209, 161, 0.15)); }
 
-.appointment--active.appointment--week4 {
+.appointment__card--active.appointment__card--week4 {
   background-color: #5f27cd; }
 
-.appointment--inactive.appointment--week4 {
+.appointment__card--inactive.appointment__card--week4 {
   color: #5f27cd;
   background: linear-gradient(90deg, #5f27cd, #5f27cd 8px, rgba(95, 39, 205, 0.15) 0, rgba(95, 39, 205, 0.15)); }
 
@@ -103,11 +103,11 @@ ol, ul {
   opacity: 1.0;
   cursor: pointer; }
 
-.appointment__create {
+.appointment__card--create {
   background-color: #222f3e;
   display: flex; }
 
-.appointment__status {
+.appointment__card--status {
   background-color: #222f3e;
   display: flex;
   justify-content: center;
@@ -117,7 +117,7 @@ ol, ul {
   margin-right: 2rem;
   animation: rotate 1s linear infinite; }
 
-.appointment__confirm {
+.appointment__card--confirm {
   background-color: rgba(238, 82, 83, 0.15);
   color: #ee5253;
   border: 2px solid #ee5253;
@@ -126,7 +126,7 @@ ol, ul {
   justify-content: space-between;
   align-items: center; }
 
-.appointment__error {
+.appointment__card--error {
   background-color: rgba(255, 159, 67, 0.15);
   color: #ff9f43;
   border: 2px solid #ff9f43;
@@ -311,6 +311,9 @@ ol, ul {
 .week-picker__list-item:hover {
   opacity: 1.0;
   cursor: pointer; }
+
+.week-picker__list-item:last-of-type {
+  margin-right: 0; }
 
 .week-picker__list-item--selected.week-picker__list-item--week1,
 .week-picker__list-item--week1:hover {
