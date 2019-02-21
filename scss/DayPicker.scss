@@ -12,16 +12,16 @@
 .day-picker__list-item:hover {
   background-color: #EE5253;
   cursor: pointer;
-  color: #222F3E;
+  color: $dark-background;
 }
 
 .day-picker__list-item--selected {
-  background-color: #F2F2F2;
-  color: #222F3E;
+  background-color: darken($white, 5%);
+  color: $dark-background;
 }
 
 .day-picker__list-item--selected:hover {
-  cursor: pointer;
+  background-color: darken($white, 5%);
 }
 
 .day-picker__list-item--full {

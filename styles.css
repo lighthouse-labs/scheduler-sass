@@ -205,14 +205,14 @@ ol, ul {
 .day-picker__list-item:hover {
   background-color: #EE5253;
   cursor: pointer;
-  color: #222F3E; }
+  color: #222f3e; }
 
 .day-picker__list-item--selected {
-  background-color: #F2F2F2;
-  color: #222F3E; }
+  background-color: #f2f2f2;
+  color: #222f3e; }
 
 .day-picker__list-item--selected:hover {
-  cursor: pointer; }
+  background-color: #f2f2f2; }
 
 .day-picker__list-item--full {
   opacity: 0.15; }
