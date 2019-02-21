@@ -8,205 +8,217 @@
     <link rel="stylesheet" href="styles.css">
   </head> 
   <body>
-    <main class="content">
+    <main class="layout">
       <section class="sidebar">
-        <img class="logo centered" src="images/logo.png">
-        <hr class="separator">
-        <ul class="week">
-          <li class="day">
-            <h2 class="regular">Monday</h2>
-            <h3 class="light">3 spots remaining</h3>
-          </li>
-          <li class="day full">
-            <h2 class="regular">Tuesday</h2>
-            <h3 class="light">no spots remaining</h3>
-          </li>
-          <li class="day selected">
-            <h2 class="regular">Wednesday</h2>
-            <h3 class="light">5 spots remaining</h3>
-          </li>
-          <li class="day">
-            <h2 class="regular">Thursday</h2>
-            <h3 class="light">1 spot remaining</h3>
-          </li>
-          <li class="day full">
-            <h2 class="regular">Friday</h2>
-            <h3 class="light">no spots remaining</h3>
-          </li>
-        </ul>
-        <img class="lhl centered" src="images/lhl.png">
+        <img class="sidebar--centered" src="images/logo.png">
+        <hr class="sidebar__separator sidebar--centered">
+        <nav class="sidebar__menu">
+          <ul class="day-picker">
+            <li class="day-picker__list-item">
+              <h2 class="text--regular">Monday</h2>
+              <h3 class="text--light">3 spots remaining</h3>
+            </li>
+            <li class="day-picker__list-item day-picker__list-item--full">
+              <h2 class="text--regular">Tuesday</h2>
+              <h3 class="text--light">no spots remaining</h3>
+            </li>
+            <li class="day-picker__list-item day-picker__list-item--selected">
+              <h2 class="text--regular">Wednesday</h2>
+              <h3 class="text--light">5 spots remaining</h3>
+            </li>
+            <li class="day-picker__list-item">
+              <h2 class="text--regular">Thursday</h2>
+              <h3 class="text--light">1 spot remaining</h3>
+            </li>
+            <li class="day-picker__list-item day-picker__list-item--full">
+              <h2 class="text--regular">Friday</h2>
+              <h3 class="text--light">no spots remaining</h3>
+            </li>
+          </ul>
+        </nav>
+        <img class="sidebar--centered" src="images/lhl.png">
       </section>
       <section class="schedule">
         <article class="appointment">
-          <header>
-            <h4 class="semi-bold">12pm</h4>
-            <hr>
+          <header class="appointment__header">
+            <h4 class="text--semi-bold">12pm</h4>
+            <hr class="appointment__header-separator">
           </header>
-          <main class="add">
-            <img src="images/add.png">
+          <main class="appointment__add">
+            <img class="appointment__add-image" src="images/add.png">
           </main>
         </article>
         <article class="appointment">
-          <header>
-            <h4 class="semi-bold">1pm</h4>
-            <hr>
+          <header class="appointment__header">
+            <h4 class="text--semi-bold">1pm</h4>
+            <hr class="appointment__header-separator">
           </header>
-          <main class="active week1">
-            <section class="left">
-              <h2 class="regular">Liam Martinez</h2>
+          <main class="appointment__content appointment--active appointment--week1">
+            <section class="appointment__content-left">
+              <h2 class="text--regular">Liam Martinez</h2>
               <section class="interviewer">
-                <h4 class="light">Interviewer</h4>
-                <h3 class="regular">Sylvia Palmer</h3>
+                <h4 class="text--light">Interviewer</h4>
+                <h3 class="text--regular">Sylvia Palmer</h3>
               </section>
             </section>
-            <section class="right">
-              <h1 class="semi-bold">W1</h1>
-              <section class="actions">
-                <img src="images/edit.png">
-                <img src="images/trash.png">
+            <section class="appointment__content-right">
+              <h1 class="text--semi-bold">W1</h1>
+              <section class="appointment__actions">
+                <img class="appointment__actions-image" src="images/edit.png">
+                <img class="appointment__actions-image" src="images/trash.png">
               </section>
             </section>
           </main>
         </article>
         <article class="appointment">
-          <header>
-            <h4 class="semi-bold">2pm</h4>
-            <hr>
+          <header class="appointment__header">
+            <h4 class="text--semi-bold">2pm</h4>
+            <hr class="appointment__header-separator">
           </header>
-          <main class="inactive week2">
-            <section class="left">
-              <h2 class="regular">Richard Wong</h2>
+          <main class="appointment__content appointment--inactive appointment--week2">
+            <section class="appointment__content-left">
+              <h2 class="text--regular">Richard Wong</h2>
               <section class="interviewer">
-                <h4 class="light">Interviewer</h4>
-                <h3 class="regular">Viktor Jain</h3>
+                <h4 class="text--light">Interviewer</h4>
+                <h3 class="text--regular">Viktor Jain</h3>
               </section>
             </section>
-            <section class="right">
-              <h1 class="semi-bold">W2</h1>
+            <section class="appointment__right">
+              <h1 class="text--semi-bold">W2</h1>
             </section>
           </main>
         </article>
         <article class="appointment">
-          <header>
-            <h4 class="semi-bold">3pm</h4>
-            <hr>
+          <header class="appointment__header">
+            <h4 class="text--semi-bold">3pm</h4>
+            <hr class="appointment__header-separator">
           </header>
-          <main class="inactive week3">
-            <section class="left">
-              <h2 class="regular">Lydia Miller-Jones</h2>
+          <main class="appointment__content appointment--inactive appointment--week3">
+            <section class="appointment__content-left">
+              <h2 class="text--regular">Lydia Miller-Jones</h2>
               <section class="interviewer">
-                <h4 class="light">Interviewer</h4>
-                <h3 class="regular">Cohana Roy</h3>
+                <h4 class="text--light">Interviewer</h4>
+                <h3 class="text--regular">Cohana Roy</h3>
               </section>
             </section>
-            <section class="right">
-              <h1 class="semi-bold">W3</h1>
+            <section class="appointment__content-right">
+              <h1 class="text--semi-bold">W3</h1>
             </section>
           </main>
         </article>
         <article class="appointment">
-          <header>
-            <h4 class="semi-bold">4pm</h4>
-            <hr>
+          <header class="appointment__header">
+            <h4 class="text--semi-bold">4pm</h4>
+            <hr class="appointment__header-separator">
           </header>
-          <main class="inactive week4">
-            <section class="left">
-              <h2 class="regular">Archie Cohen</h2>
-              <section class="interviewer">
-                <h4 class="light">Interviewer</h4>
-                <h3 class="regular">Sylvia Palmer</h3>
+          <main class="appointment__content appointment--inactive appointment--week4">
+            <section class="appointment__content-left">
+              <h2 class="text--regular">Archie Cohen</h2>
+              <section class="appointment__interviewer">
+                <h4 class="text--light">Interviewer</h4>
+                <h3 class="text--regular">Sylvia Palmer</h3>
               </section>
             </section>
-            <section class="right">
-              <h1 class="semi-bold">W4</h1>
+            <section class="appointment__content-right">
+              <h1 class="text--semi-bold">W4</h1>
             </section>
           </main>
         </article>
         <article class="appointment">
-          <header>
-            <h4 class="semi-bold">5pm</h4>
-            <hr>
+          <header class="appointment__header">
+            <h4 class="text--semi-bold">5pm</h4>
+            <hr class="appointment__header-separator">
           </header>
-          <main class="create">
-            <section class="left">
-                <input class="semi-bold" name="name" placeholder="Enter Student Name">
+          <main class="appointment__content appointment__create">
+            <section class="appointment__content-left">
+                <input class="appointment__create-input text--semi-bold" name="name" placeholder="Enter Student Name">
                 <section class="interviewer">
-                  <h4 class="light">Interviewer</h4>
-                  <ul>
-                    <li><img src="images/one.png"></li>
-                    <li class="selected">
-                      <img src="images/two.png">Sven Jones
+                  <h4 class="interviewer__header text--light">Interviewer</h4>
+                  <ul class="interviewer__list">
+                    <li class="interviewer__list-item">
+                      <img class="interviewer__image" src="images/one.png">
                     </li>
-                    <li><img src="images/three.png"></li>
-                    <li><img src="images/three.png"></li>
-                    <li class="selected"><img src="images/three.png">Susan Stephens</li>
-                    <li><img src="images/three.png"></li>
+                    <li class="interviewer__list-item interviewer__list-item--selected">
+                      <img class="interviewer__image interviewer__image--selected" src="images/two.png">Sven Jones
+                    </li>
+                    <li class="interviewer__list-item">
+                      <img class="interviewer__image" src="images/three.png">
+                    </li>
+                    <li class="interviewer__list-item">
+                      <img class="interviewer__image" src="images/three.png">
+                    </li>
+                    <li class="interviewer__list-item interviewer__list-item--selected">
+                      <img class="interviewer__image interviewer__image--selected" src="images/three.png">Susan Stephens
+                    </li>
+                    <li class="interviewer__list-item">
+                      <img class="interviewer__image" src="images/three.png">
+                    </li>
                   </ul>
                 </section>
             </section>
-            <section class="right">
-              <section class="weeks">
-                <ul>
-                  <li class="week1">
-                    <h1 class="regular">W1</h1>
+            <section class="appointment__content-right">
+              <section class="week-picker">
+                <ul class="week-picker__list">
+                  <li class="week-picker__list-item week-picker__list-item--week1">
+                    <h1 class="text--regular">W1</h1>
                   </li>
-                  <li class="selected week2">
-                    <h1 class="regular">W2</h1>
+                  <li class="week-picker__list-item week-picker__list-item--week2 week-picker__list-item--selected">
+                    <h1 class="text--regular">W2</h1>
                   </li>
-                  <li class="week3">
-                    <h1 class="regular">W3</h1>
+                  <li class="week-picker__list-item week-picker__list-item--week3">
+                    <h1 class="text--regular">W3</h1>
                   </li>
-                  <li class="week4">
-                    <h1 class="regular">W4</h1>
+                  <li class="week-picker__list-item week-picker__list-item--week4">
+                    <h1 class="text--regular">W4</h1>
                   </li>
                 </ul>
               </section>
-              <section class="actions">
-                <button class="danger">Cancel</button>
-                <button class="confirm">Save</button>
+              <section class="appointment__actions">
+                <button class="button button--danger">Cancel</button>
+                <button class="button button--confirm">Save</button>
               </section>
             </section> 
           </main>
         </article>
         <article class="appointment">
           <header>
-            <h4 class="semi-bold">6pm</h4>
+            <h4 class="text--semi-bold">6pm</h4>
             <hr>
           </header>
-          <main class="status">
-            <img src="images/status.png">
-            <h1 class="semi-bold">Saving</h1>
+          <main class="appointment__content appointment__status">
+            <img class="appointment__status-image" src="images/status.png">
+            <h1 class="text--semi-bold">Saving</h1>
           </main>
         </article>
         <article class="appointment">
           <header>
-            <h4 class="semi-bold">7pm</h4>
+            <h4 class="text--semi-bold">7pm</h4>
             <hr>
           </header>
-          <main class="confirm">
-            <h1 class="semi-bold">Delete appointment?</h1>
-            <section class="actions">
-              <button class="inverted danger">Cancel</button>
-              <button class="inverted danger">Confirm</button>
+          <main class="appointment__content appointment__confirm">
+            <h1 class="text--semi-bold">Delete appointment?</h1>
+            <section class="appointment__actions">
+              <button class="button button--inverted button--danger">Cancel</button>
+              <button class="button button--inverted button--danger">Confirm</button>
             </section>
           </main>
         </article>
         <article class="appointment">
           <header>
-            <h4 class="semi-bold">8pm</h4>
+            <h4 class="text--semi-bold">8pm</h4>
             <hr>
           </header>
-          <main class="error">
-            <section class="message">
-              <h1 class="semi-bold">Error</h1>
-              <h3 class="light">Could not delete appointment.</h3>
+          <main class="appointment__content appointment__error">
+            <section class="appointment__error-message">
+              <h1 class="text--semi-bold">Error</h1>
+              <h3 class="text--light">Could not delete appointment.</h3>
             </section>
-            <img src="images/close.png">
+            <img class="appointment__error-close" src="images/close.png">
           </main>
         </article>
         <article class="appointment">
           <header>
-            <h4 class="semi-bold">9pm</h4>
+            <h4 class="text--semi-bold">9pm</h4>
             <hr>
           </header>
         </article>

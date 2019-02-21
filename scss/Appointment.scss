@@ -1,0 +1,141 @@
+.appointment__content {
+  min-height: 9rem;
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  color: $white;
+}
+
+.appointment__content-left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 50%;
+}
+
+.appointment__content-right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.appointment__add {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment__add-button {
+  @include button-inactive;
+}
+
+.appointment__add-button:hover {
+  @include button-active;
+}
+
+.appointment__header {
+  display: flex;
+}
+
+.appointment__header-separator {
+  border-style: solid;
+  border-width: 0.5px;
+  width: 100%;
+  color: darken($white, 5%);
+  margin-left: 1rem;
+}
+
+@each $color in $weeks-colors {
+  $i: index($weeks-colors, $color);
+
+  .appointment--active.appointment--week#{$i} {
+    background-color: rgba($color, $active-opacity);
+  }
+  
+  .appointment--inactive.appointment--week#{$i} {
+    color: rgba($color, $active-opacity);
+    background: linear-gradient(90deg, rgba($color, $active-opacity), rgba($color, $active-opacity) 8px, rgba($color, $inactive-opacity) 0, rgba($color, $inactive-opacity));
+  }
+}
+
+.appointment__actions-button {
+  @include button-inactive;
+  margin-right: 0.5rem;
+}
+
+.appointment__actions-button:last-of-type {
+  margin-right: 0;
+}
+
+.appointment__actions-button:hover {
+  @include button-active;
+}
+
+.appointment__create {
+  background-color: $dark-background;
+  display: flex;
+}
+
+.appointment__status {
+  background-color: $dark-background;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment__status-image {
+  margin-right: 2rem;
+  animation: rotate 1s linear infinite;
+}
+
+.appointment__confirm {
+  @include border-card($danger-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointment__error {
+  @include border-card($error-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointment__error-message {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment__error-close {
+  @include button-inactive;
+
+  align-self: flex-start;
+}
+
+.appointment__error-close:hover {
+  @include button-active;
+}
+
+.appointment__create-input {
+  background-color: $dark-background;
+  border: 0;
+  border-bottom: 1px solid;
+  color: $white;
+  font-size: 1.5rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.appointment__main-create-input:focus {
+  outline: none;      
+}

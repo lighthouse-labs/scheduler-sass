@@ -1,0 +1,41 @@
+.interviewer__header {
+  margin-bottom: 0.5rem;
+}
+
+.interviewer__image {
+  border-radius: 16px;
+}
+
+.interviewer__list {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.interviewer__list-item {
+  @include button-inactive;
+
+  margin-right: 0.5rem;
+}
+
+.interviewer__list-item--selected {
+  color: $dark-background;
+  background-color: $white;
+  border-radius: 16px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 1rem;
+  user-select: none;
+}
+
+.interviewer__image--selected {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem;
+}
+
+.interviewer__list-item--selected,
+.interviewer__list-item:hover {
+  @include button-active;
+}

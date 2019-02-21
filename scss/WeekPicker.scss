@@ -1,0 +1,31 @@
+.week-picker {
+  margin-bottom: 1rem;
+}
+
+.week-picker__list {
+  display: flex;
+  user-select: none;
+}
+
+.week-picker__list-item {
+  @include button-inactive;
+  
+  margin-right: 0.5rem;
+}
+
+.week-picker__list-item:hover {
+  @include button-active;
+}
+
+@each $color in $weeks-colors {
+  $i: index($weeks-colors, $color);
+
+  .week-picker__list-item--selected.week-picker__list-item--week#{$i},
+  .week-picker__list-item--week#{$i}:hover {
+    color: $color;
+  }
+}
+
+.week-picker__list-item--selected {
+  opacity: 1;
+}

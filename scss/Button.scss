@@ -1,0 +1,39 @@
+.button {
+  @include button-inactive;
+
+  border-radius: 1rem;
+  border: 0;
+  font-size: 1.5rem;
+  height: 2rem;
+  margin-right: 1rem;
+  width: 8rem;
+}
+
+.button:last-of-type {
+  margin-right: 0;
+}
+
+.button:hover {
+  @include button-active;
+}
+
+.button:focus {
+  outline: none;
+}
+
+.button--danger {
+  color: $danger-color;
+}
+
+.button--confirm {
+  color: $confirm-color;
+}
+
+.button--inverted.button--danger{
+  color: $white;
+  background-color: rgba($danger-color, 0.7);
+}
+
+.button__hover {
+  background-color: $danger-color;
+}
