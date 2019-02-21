@@ -1,0 +1,359 @@
+* {
+  box-sizing: border-box; }
+
+body {
+  font-family: 'Source Sans Pro', sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0; }
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0; }
+
+.light {
+  font-weight: 300; }
+
+.regular {
+  font-weight: 400; }
+
+.semi-bold {
+  font-weight: 600; }
+
+.bold {
+  font-weight: 700; }
+
+.black {
+  font-weight: 900; }
+
+.content {
+  display: flex;
+  min-height: 100vh; }
+
+.sidebar {
+  background-color: #222F3E;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  min-width: 18rem;
+  padding: 2rem 0; }
+
+.centered {
+  align-self: center; }
+
+.week {
+  flex: 1; }
+
+.day {
+  transition: opacity 0.2s ease-out;
+  color: #8395A7;
+  height: 5rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center; }
+
+.day:hover {
+  background-color: #EE5253;
+  cursor: pointer;
+  color: #222F3E; }
+
+.day.selected {
+  background-color: #F2F2F2;
+  color: #222F3E; }
+
+.day.selected:hover {
+  cursor: pointer; }
+
+.day.full {
+  opacity: 0.30; }
+
+.separator {
+  width: 90%;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  border-style: solid;
+  border-width: 0.5px;
+  color: #F2F2F2; }
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  width: 100vw; }
+
+.appointment main {
+  min-height: 9rem; }
+
+.appointment main.add {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+.appointment main.add img {
+  transition: opacity 0.2s ease-out;
+  opacity: 0.7; }
+
+.appointment main.add img:hover {
+  opacity: 1.0;
+  cursor: pointer; }
+
+.appointment header {
+  display: flex; }
+
+.appointment header hr {
+  border-style: solid;
+  border-width: 0.5px;
+  width: 100%;
+  color: #F2F2F2;
+  margin-left: 1rem; }
+
+.appointment main.active.week1 {
+  background-color: #54a0ff; }
+
+.appointment main.inactive.week1 {
+  color: #54a0ff;
+  background: linear-gradient(90deg, #54a0ff, #54a0ff 8px, rgba(84, 160, 255, 0.15) 0, rgba(84, 160, 255, 0.15)); }
+
+.appointment main.active.week2 {
+  background-color: #48dbfb; }
+
+.appointment main.inactive.week2 {
+  color: #48dbfb;
+  background: linear-gradient(90deg, #48dbfb, #48dbfb 8px, rgba(72, 219, 251, 0.15) 0, rgba(72, 219, 251, 0.15)); }
+
+.appointment main.active.week3 {
+  background-color: #1dd1a1; }
+
+.appointment main.inactive.week3 {
+  color: #1dd1a1;
+  background: linear-gradient(90deg, #1dd1a1, #1dd1a1 8px, rgba(29, 209, 161, 0.15) 0, rgba(29, 209, 161, 0.15)); }
+
+.appointment main.active.week4 {
+  background-color: #5f27cd; }
+
+.appointment main.inactive.week4 {
+  color: #5f27cd;
+  background: linear-gradient(90deg, #5f27cd, #5f27cd 8px, rgba(95, 39, 205, 0.15) 0, rgba(95, 39, 205, 0.15)); }
+
+.appointment main.active section.actions img {
+  transition: opacity 0.2s ease-out;
+  opacity: 0.7;
+  margin-right: 0.5rem; }
+
+.appointment main.active section.actions img:last-of-type {
+  margin-right: 0; }
+
+.appointment main.active section.actions img:hover {
+  opacity: 1.0;
+  cursor: pointer; }
+
+.appointment main.create {
+  background-color: #222F3E;
+  display: flex; }
+
+.appointment main.status {
+  background-color: #222F3E;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+
+@keyframes rotate {
+  100% {
+    -webkit-transform: rotate(360deg);
+    transform: rotate(360deg); } }
+
+.appointment main.status img {
+  margin-right: 2rem;
+  animation: rotate 1s linear infinite; }
+
+.appointment main.confirm {
+  background-color: rgba(238, 82, 83, 0.15);
+  color: #ee5253;
+  border: 2px solid #ee5253;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center; }
+
+.appointment main.confirm h1 {
+  margin-bottom: 1rem; }
+
+.appointment main.error {
+  background-color: rgba(255, 159, 67, 0.15);
+  color: #ff9f43;
+  border: 2px solid #ff9f43;
+  display: flex;
+  justify-content: space-between;
+  align-items: center; }
+
+.appointment main.error section.message {
+  display: flex;
+  flex-direction: column; }
+
+.appointment main.error img {
+  transition: opacity 0.2s ease-out;
+  opacity: 0.7;
+  align-self: flex-start; }
+
+.appointment main.error img:hover {
+  opacity: 1.0;
+  cursor: pointer; }
+
+.appointment main {
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  color: #FFFFFF; }
+
+.appointment main section.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 50%; }
+
+.appointment main section.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end; }
+
+.appointment main.create input {
+  background-color: #222F3E;
+  border-bottom: 1px solid;
+  border: 0;
+  color: #FFF;
+  font-size: 1.5rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  width: 100%; }
+
+.appointment main.create input:focus {
+  outline: none; }
+
+.interviewer img {
+  border-radius: 16px; }
+
+.interviewer ul {
+  display: flex;
+  flex-flow: row wrap; }
+
+.interviewer li {
+  margin-right: 0.5rem; }
+
+.interviewer li.selected {
+  color: #222F3E;
+  background-color: #FFF;
+  border-radius: 16px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 1rem;
+  user-select: none; }
+
+.interviewer li.selected img {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem; }
+
+.interviewer li {
+  transition: opacity 0.2s ease-out;
+  opacity: 0.7; }
+
+.interviewer li.selected,
+.interviewer li:hover {
+  opacity: 1.0;
+  cursor: pointer; }
+
+.interviewer h4 {
+  margin-bottom: 0.5rem; }
+
+.weeks {
+  margin-bottom: 1rem; }
+
+.weeks ul {
+  display: flex;
+  user-select: none; }
+
+.weeks li {
+  margin-right: 0.5rem; }
+
+.weeks h1 {
+  transition: opacity 0.2s ease-out;
+  opacity: 0.7; }
+
+.weeks h1:hover {
+  opacity: 1.0;
+  cursor: pointer; }
+
+.weeks li.selected.week1,
+.weeks li.week1:hover {
+  color: #54a0ff; }
+
+.weeks li.selected.week2,
+.weeks li.week2:hover {
+  color: #48dbfb; }
+
+.weeks li.selected.week3,
+.weeks li.week3:hover {
+  color: #1dd1a1; }
+
+.weeks li.selected.week4,
+.weeks li.week4:hover {
+  color: #5f27cd; }
+
+.weeks li.selected h1 {
+  opacity: 1; }
+
+button {
+  height: 2rem;
+  width: 8rem;
+  border-radius: 1rem;
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  border: 0;
+  opacity: 0.7;
+  transition: opacity 0.2s ease-out; }
+
+button:last-of-type {
+  margin-right: 0; }
+
+button:hover {
+  opacity: 1.0;
+  cursor: pointer; }
+
+button:focus {
+  outline: none; }
+
+button.danger {
+  color: #ee5253; }
+
+button.confirm {
+  color: #10AC84; }
+
+button.inverted.danger {
+  color: #fff;
+  background-color: rgba(238, 82, 83, 0.7); }
+
+button.inverted.danger:hover {
+  background-color: #ee5253;
+  cursor: pointer; }
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 12px; }
+  .content {
+    flex-direction: column; } }
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 10px; } }

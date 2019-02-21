@@ -1,0 +1,418 @@
+$active-opacity: 1.0;
+$inactive-opacity: 0.15;
+
+$white: #fff;
+$black: #000;
+
+$light-text: $f2f2f2;
+
+$dark-background: #222f3e;
+
+$weeks-colors: #54a0ff, #48dbfb, #1dd1a1, #5f27cd;
+$danger-color: #ee5253;
+$error-color: #ff9f43;
+$confirm-color: #10ac84;
+
+$spacing: 2rem;
+
+@mixin fade {
+  transition: opacity 0.2s ease-out;
+}
+
+@mixin button-inactive {
+  @include fade;
+  opacity: 0.7;
+}
+
+@mixin button-active {
+  opacity: 1.0;
+  cursor: pointer;
+}
+
+@mixin border-card($color) {
+  background-color: rgba($color, $inactive-opacity);
+  color: $color;
+  border: 2px solid $color;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+}
+
+ol, ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.light { font-weight: 300; }
+.regular { font-weight: 400; }
+.semi-bold { font-weight: 600; }
+.bold { font-weight: 700; }
+.black { font-weight: 900; }
+
+.content {
+  display: flex;
+  min-height: 100vh;
+}
+
+.sidebar {
+  background-color: $dark-background; 
+  box-shadow: 0px 4px 8px rgba($dark-background, 0.5);
+  display: flex;
+  flex-direction: column;
+  min-width: 18rem; 
+  padding: $spacing 0;
+}
+
+.centered {
+  align-self: center;
+}
+
+.week {
+  flex: 1;
+}
+
+.day {
+  @include fade;
+
+  color: #8395A7;
+  height: 5rem;
+  padding-left: 2rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.day:hover {
+  background-color: #EE5253;
+  cursor: pointer;
+  color: #222F3E;
+}
+
+.day.selected {
+  background-color: #F2F2F2;
+  color: #222F3E;
+}
+
+.day.selected:hover {
+  cursor: pointer;
+}
+
+.day.full {
+  opacity: $inactive-opacity;
+}
+
+.separator {
+  width: 90%;
+  margin: $spacing 0;
+  border: solid 0.5px;
+  color: $white;
+}
+
+.schedule {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin: 2rem 0;
+  padding: 0 $spacing;
+  width: 100vw;
+}
+
+.appointment main {
+  min-height: 9rem;
+}
+
+.appointment main.add {
+  padding: 2rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment main.add img {
+  @include button-inactive;
+}
+
+.appointment main.add img:hover {
+  @include button-active;
+}
+
+.appointment header {
+  display: flex;
+}
+
+.appointment header hr {
+  border-style: solid;
+  border-width: 0.5px;
+  width: 100%;
+  color: #F2F2F2;
+  margin-left: 1rem;
+}
+
+@each $color in $weeks-colors {
+  $i: index($weeks-colors, $color);
+
+  .appointment main.active.week#{$i} {
+    background-color: rgba($color, $active-opacity);
+  }
+  
+  .appointment main.inactive.week#{$i} {
+    color: rgba($color, $active-opacity);
+    background: linear-gradient(90deg, rgba($color, $active-opacity), rgba($color, $active-opacity) 8px, rgba($color, $inactive-opacity) 0, rgba($color, $inactive-opacity));
+  }
+}
+
+.appointment main.active section.actions img {
+  @include button-inactive;
+  margin-right: 0.5rem;
+}
+
+.appointment main.active section.actions img:last-of-type {
+  margin-right: 0;
+}
+
+.appointment main.active section.actions img:hover {
+  @include button-active;
+}
+
+.appointment main.create {
+  background-color: #222F3E;
+  display: flex;
+}
+
+.appointment main.status {
+  background-color: #222F3E;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@keyframes rotate {
+  100% {
+     -webkit-transform: rotate(360deg);
+     transform:rotate(360deg);
+  }
+}
+
+.appointment main.status img {
+  margin-right: 2rem;
+  animation: rotate 1s linear infinite;
+}
+
+.appointment main.confirm {
+  @include border-card($danger-color);
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.appointment main.confirm h1 {
+  margin-bottom: 1rem;
+}
+
+.appointment main.error {
+  @include border-card($error-color);
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.appointment main.error section.message {
+  display: flex;
+  flex-direction: column;
+}
+
+.appointment main.error img {
+  @include button-inactive;
+
+  align-self: flex-start;
+}
+
+.appointment main.error img:hover {
+  @include button-active;
+}
+
+.appointment main {
+  margin-left: 3rem;
+  border-radius: 0.5rem;
+  padding: 1.2rem 1.5rem;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: row wrap;
+  color: $white;
+}
+
+.appointment main section.left {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-width: 50%;
+}
+
+.appointment main section.right {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.appointment main.create input {
+  background-color: $dark-background;
+  border-bottom: 1px solid;
+  border: 0;
+  color: $white;
+  font-size: 1.5rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  width: 100%;
+}
+
+.appointment main.create input:focus {
+  outline: none;      
+}
+
+.interviewer img {
+  border-radius: 16px;
+}
+
+.interviewer ul {
+  display: flex;
+  flex-flow: row wrap;
+}
+
+.interviewer li {
+  margin-right: 0.5rem;
+}
+
+.interviewer li.selected {
+  color: $dark-background;
+  background-color: $white;
+  border-radius: 16px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  padding-left: 2px;
+  padding-right: 1rem;
+  user-select: none;
+}
+
+.interviewer li.selected img {
+  width: 28px;
+  height: 28px;
+  margin-right: 0.5rem;
+}
+
+.interviewer li {
+  @include button-inactive;
+}
+
+.interviewer li.selected,
+.interviewer li:hover {
+  @include button-active;
+}
+
+.interviewer h4 {
+  margin-bottom: 0.5rem;
+}
+
+.weeks {
+  margin-bottom: 1rem;
+}
+
+.weeks ul {
+  display: flex;
+  user-select: none;
+}
+
+.weeks li {
+  margin-right: 0.5rem;
+}
+
+.weeks h1 {
+  @include button-inactive;
+}
+
+.weeks h1:hover {
+  @include button-active;
+}
+
+@each $color in $weeks-colors {
+  $i: index($weeks-colors, $color);
+
+  .weeks li.selected.week#{$i},
+  .weeks li.week#{$i}:hover {
+    color: $color;
+  }
+}
+
+.weeks li.selected h1 {
+  opacity: 1;
+}
+
+button {
+  @include button-inactive;
+
+  border-radius: 1rem;
+  border: 0;
+  font-size: 1.5rem;
+  height: 2rem;
+  margin-right: 1rem;
+  width: 8rem;
+}
+
+button:last-of-type {
+  margin-right: 0;
+}
+
+button:hover {
+  @include button-active;
+}
+
+button:focus {
+  outline: none;
+}
+
+button.danger {
+  color: $danger-color;
+}
+
+button.confirm {
+  color: $confirm-color;
+}
+
+button.inverted.danger {
+  color: #fff;
+  background-color: rgba(238, 82, 83, 0.7);
+}
+
+button.inverted.danger:hover {
+  background-color: $danger-color;
+}
+
+@media only screen and (max-width: 960px) {
+  html {
+    font-size: 12px;
+  }
+
+  .content {
+    flex-direction: column;
+  }
+}
+
+@media only screen and (max-width: 320px) {
+  html {
+    font-size: 10px;
+  }
+}

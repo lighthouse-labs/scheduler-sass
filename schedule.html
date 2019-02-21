@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Interview Scheduler</title>
+    <meta name="viewport" content="width=device-width">
+    <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,700,900" rel="stylesheet">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="styles.css">
+  </head> 
+  <body>
+    <main class="content">
+      <section class="sidebar">
+        <img class="logo centered" src="images/logo.png">
+        <hr class="separator">
+        <ul class="week">
+          <li class="day">
+            <h2 class="regular">Monday</h2>
+            <h3 class="light">3 spots remaining</h3>
+          </li>
+          <li class="day full">
+            <h2 class="regular">Tuesday</h2>
+            <h3 class="light">no spots remaining</h3>
+          </li>
+          <li class="day selected">
+            <h2 class="regular">Wednesday</h2>
+            <h3 class="light">5 spots remaining</h3>
+          </li>
+          <li class="day">
+            <h2 class="regular">Thursday</h2>
+            <h3 class="light">1 spot remaining</h3>
+          </li>
+          <li class="day full">
+            <h2 class="regular">Friday</h2>
+            <h3 class="light">no spots remaining</h3>
+          </li>
+        </ul>
+        <img class="lhl centered" src="images/lhl.png">
+      </section>
+      <section class="schedule">
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">12pm</h4>
+            <hr>
+          </header>
+          <main class="add">
+            <img src="images/add.png">
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">1pm</h4>
+            <hr>
+          </header>
+          <main class="active week1">
+            <section class="left">
+              <h2 class="regular">Liam Martinez</h2>
+              <section class="interviewer">
+                <h4 class="light">Interviewer</h4>
+                <h3 class="regular">Sylvia Palmer</h3>
+              </section>
+            </section>
+            <section class="right">
+              <h1 class="semi-bold">W1</h1>
+              <section class="actions">
+                <img src="images/edit.png">
+                <img src="images/trash.png">
+              </section>
+            </section>
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">2pm</h4>
+            <hr>
+          </header>
+          <main class="inactive week2">
+            <section class="left">
+              <h2 class="regular">Richard Wong</h2>
+              <section class="interviewer">
+                <h4 class="light">Interviewer</h4>
+                <h3 class="regular">Viktor Jain</h3>
+              </section>
+            </section>
+            <section class="right">
+              <h1 class="semi-bold">W2</h1>
+            </section>
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">3pm</h4>
+            <hr>
+          </header>
+          <main class="inactive week3">
+            <section class="left">
+              <h2 class="regular">Lydia Miller-Jones</h2>
+              <section class="interviewer">
+                <h4 class="light">Interviewer</h4>
+                <h3 class="regular">Cohana Roy</h3>
+              </section>
+            </section>
+            <section class="right">
+              <h1 class="semi-bold">W3</h1>
+            </section>
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">4pm</h4>
+            <hr>
+          </header>
+          <main class="inactive week4">
+            <section class="left">
+              <h2 class="regular">Archie Cohen</h2>
+              <section class="interviewer">
+                <h4 class="light">Interviewer</h4>
+                <h3 class="regular">Sylvia Palmer</h3>
+              </section>
+            </section>
+            <section class="right">
+              <h1 class="semi-bold">W4</h1>
+            </section>
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">5pm</h4>
+            <hr>
+          </header>
+          <main class="create">
+            <section class="left">
+                <input class="semi-bold" name="name" placeholder="Enter Student Name">
+                <section class="interviewer">
+                  <h4 class="light">Interviewer</h4>
+                  <ul>
+                    <li><img src="images/one.png"></li>
+                    <li class="selected">
+                      <img src="images/two.png">Sven Jones
+                    </li>
+                    <li><img src="images/three.png"></li>
+                    <li><img src="images/three.png"></li>
+                    <li class="selected"><img src="images/three.png">Susan Stephens</li>
+                    <li><img src="images/three.png"></li>
+                  </ul>
+                </section>
+            </section>
+            <section class="right">
+              <section class="weeks">
+                <ul>
+                  <li class="week1">
+                    <h1 class="regular">W1</h1>
+                  </li>
+                  <li class="selected week2">
+                    <h1 class="regular">W2</h1>
+                  </li>
+                  <li class="week3">
+                    <h1 class="regular">W3</h1>
+                  </li>
+                  <li class="week4">
+                    <h1 class="regular">W4</h1>
+                  </li>
+                </ul>
+              </section>
+              <section class="actions">
+                <button class="danger">Cancel</button>
+                <button class="confirm">Save</button>
+              </section>
+            </section> 
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">6pm</h4>
+            <hr>
+          </header>
+          <main class="status">
+            <img src="images/status.png">
+            <h1 class="semi-bold">Saving</h1>
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">7pm</h4>
+            <hr>
+          </header>
+          <main class="confirm">
+            <h1 class="semi-bold">Delete appointment?</h1>
+            <section class="actions">
+              <button class="inverted danger">Cancel</button>
+              <button class="inverted danger">Confirm</button>
+            </section>
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">8pm</h4>
+            <hr>
+          </header>
+          <main class="error">
+            <section class="message">
+              <h1 class="semi-bold">Error</h1>
+              <h3 class="light">Could not delete appointment.</h3>
+            </section>
+            <img src="images/close.png">
+          </main>
+        </article>
+        <article class="appointment">
+          <header>
+            <h4 class="semi-bold">9pm</h4>
+            <hr>
+          </header>
+        </article>
+      </section>
+    </main>
+  </body>
+</html>
