@@ -190,7 +190,7 @@ ol, ul {
   color: #fff;
   background-color: rgba(238, 82, 83, 0.7); }
 
-.button__hover {
+.button--inverted.button--danger:hover {
   background-color: #ee5253; }
 
 .day-picker__list-item {
