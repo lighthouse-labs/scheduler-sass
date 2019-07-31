@@ -9,3 +9,7 @@ npm run build
 ## Viewing
 
 Open the `index.html` file in the browser.
+
+## Preview
+
+![Preview](docs/preview.png)
