@@ -50,7 +50,7 @@ ol, ul {
   opacity: 0.7; }
 
 .appointment__add-button:hover {
-  opacity: 1.0;
+  opacity: 1;
   cursor: pointer; }
 
 .appointment__time {
@@ -100,7 +100,7 @@ ol, ul {
   margin-right: 0; }
 
 .appointment__actions-button:hover {
-  opacity: 1.0;
+  opacity: 1;
   cursor: pointer; }
 
 .appointment__card--create {
@@ -144,7 +144,7 @@ ol, ul {
   align-self: flex-start; }
 
 .appointment__error-close:hover {
-  opacity: 1.0;
+  opacity: 1;
   cursor: pointer; }
 
 .appointment__create-input {
@@ -174,7 +174,7 @@ ol, ul {
   margin-right: 0; }
 
 .button:hover {
-  opacity: 1.0;
+  opacity: 1;
   cursor: pointer; }
 
 .button:focus {
@@ -195,7 +195,7 @@ ol, ul {
 
 .day-picker__list-item {
   transition: opacity 0.2s ease-out;
-  color: #8395A7;
+  color: #8395a7;
   height: 5rem;
   padding-left: 2rem;
   display: flex;
@@ -203,7 +203,7 @@ ol, ul {
   justify-content: center; }
 
 .day-picker__list-item:hover {
-  background-color: #EE5253;
+  background-color: #ee5253;
   cursor: pointer;
   color: #222f3e; }
 
@@ -250,7 +250,7 @@ ol, ul {
 
 .interviewer__list-item--selected,
 .interviewer__list-item:hover {
-  opacity: 1.0;
+  opacity: 1;
   cursor: pointer; }
 
 .schedule {
@@ -309,7 +309,7 @@ ol, ul {
   margin-right: 0.5rem; }
 
 .week-picker__list-item:hover {
-  opacity: 1.0;
+  opacity: 1;
   cursor: pointer; }
 
 .week-picker__list-item:last-of-type {

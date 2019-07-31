@@ -1,6 +1,6 @@
-@import './helpers/variables.scss';
-@import './helpers/mixins.scss';
-@import './helpers/animations.scss';
+@import "./helpers/variables.scss";
+@import "./helpers/mixins.scss";
+@import "./helpers/animations.scss";
 
 * {
   box-sizing: border-box;
@@ -10,15 +10,15 @@ body {
   font-family: $font-family;
 }
 
-@import './helpers/reset.scss';
+@import "./helpers/reset.scss";
 
-@import './Appointment.scss';
-@import './Button.scss';
-@import './DayPicker.scss';
-@import './Interviewer.scss';
-@import './Schedule.scss';
-@import './Sidebar.scss';
-@import './Typography.scss';
-@import './WeekPicker.scss';
+@import "./Appointment.scss";
+@import "./Button.scss";
+@import "./DayPicker.scss";
+@import "./Interviewer.scss";
+@import "./Schedule.scss";
+@import "./Sidebar.scss";
+@import "./Typography.scss";
+@import "./WeekPicker.scss";
 
-@import './Layout.scss';
+@import "./Layout.scss";

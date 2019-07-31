@@ -1,7 +1,7 @@
 .day-picker__list-item {
   @include fade;
 
-  color: #8395A7;
+  color: #8395a7;
   height: 5rem;
   padding-left: 2rem;
   display: flex;
@@ -10,7 +10,7 @@
 }
 
 .day-picker__list-item:hover {
-  background-color: #EE5253;
+  background-color: #ee5253;
   cursor: pointer;
   color: $dark-background;
 }
